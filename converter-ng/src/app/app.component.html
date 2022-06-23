@@ -1,0 +1,38 @@
+<nav class="navbar bg-secondary bg-gradient shadow-sm">
+  <div class="container">
+    <a class="navbar-brand"
+       href="#">
+      <img src="./assets/images/profile.png"
+           class="rounded-circle border border-1"
+           alt="Logo"
+           width="50"
+           height="45">
+    </a>
+  </div>
+</nav>
+<div class="container-fluid vh-100 d-flex flex-column align-items-center">
+  <div class="card align-middle w-50 mt-5 shadow-sm">
+    <ng-container *ngTemplateOutlet="url ? video : image"></ng-container>
+    <div class="card-body">
+      <input id="formFile"
+             class="form-control"
+             type="file"
+             (change)="onUpload($event)">
+    </div>
+  </div>
+</div>
+
+<ng-template #video>
+  <video class="card-img-top"
+         [src]="url"
+         controls>
+  </video>
+</ng-template>
+
+<ng-template #image>
+  <img src="./assets/images/thumb.png"
+       class="card-img-top"
+       alt="No video"
+       width="517.500"
+       height="388.125"/>
+</ng-template>

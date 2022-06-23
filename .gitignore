@@ -1,0 +1,9 @@
+node_modules
+.vscode
+.angular
+.idea
+*.iml
+*.md
+.DS_Store
+.mvn
+**/target
